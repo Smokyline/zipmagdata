@@ -14,11 +14,11 @@ def get_ftp_db(data_format='IAGA2002'):
     print(MAGDATA_STATIONS_PATH['irt']['20211224'])
 
     """
-    if data_format == 'IAGA2002':
+    if data_format == 'iaga2002':
         dir_path = os.path.join(FTP_DIR, 'IAGA2002')
-    elif data_format == 'IAF':
+    elif data_format == 'iaf':
         dir_path = os.path.join(FTP_DIR, 'IAF')
-    elif data_format == 'ADD':
+    elif data_format == 'add':
         dir_path = FTP1_DIR
 
     FTP1_EXCEPTION_DIR = ['Soft', 'tmp']
