@@ -64,8 +64,8 @@ def get_station_time_intervals(path_db, data_format='IAGA2002'):
     for station_key in path_db.keys():
         station_time_intervals[station_key] = []
         time_range = []
-        if data_format == 'ADD':
-            station_key = station_key.upper()
+        #if data_format == 'ADD':
+       #     station_key = station_key.upper()
         for i, station_date in enumerate(path_db[station_key].keys()):
             if data_format == 'IAGA2002':
                 time_range.append(datetime.datetime(int(station_date[:4]),  # y

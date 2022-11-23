@@ -63,7 +63,7 @@ def get_ftp_db(data_format='IAGA2002'):
                         MAGDATA_STATIONS_PATH[station] = {}
                     if year not in MAGDATA_STATIONS_PATH[station]:
                         MAGDATA_STATIONS_PATH[station][year] = []
-                    year_dir = os.path.join(os.path.join(FTP1_DIR, year), station)
+                    year_dir = os.path.join(os.path.join(FTP1_DIR, year), station.upper())
                     for filename in os.listdir(year_dir):
                         MAGDATA_STATIONS_PATH[station][year].append(os.path.join(year_dir, filename))
 
