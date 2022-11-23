@@ -81,18 +81,18 @@ def get_station_time_intervals(path_db, data_format='IAGA2002'):
         start_int = time_range[0]
         if data_format == 'IAGA2002':
             for i, ct in enumerate(time_range):
-                if ct - time_range[i - 1] > datetime.timedelta(days=1):
+                if ct - time_range[i - 1] > datetime.timedelta(days=2):
                     #print([start_int, time_range[i - 1]])
                     time_intervals.append([start_int, time_range[i - 1]])
                     start_int = ct
         elif data_format == 'IAF':
             for i, ct in enumerate(time_range):
-                if ct - time_range[i - 1] > datetime.timedelta(days=32):
+                if ct - time_range[i - 1] > datetime.timedelta(days=33):
                     time_intervals.append([start_int, time_range[i - 1]])
                     start_int = ct
         elif data_format == 'ADD':
             for i, ct in enumerate(time_range):
-                if ct - time_range[i - 1] > datetime.timedelta(days=366):
+                if ct - time_range[i - 1] > datetime.timedelta(days=367):
                     time_intervals.append([start_int, time_range[i - 1]])
                     start_int = ct
 
