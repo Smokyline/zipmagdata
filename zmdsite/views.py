@@ -10,7 +10,10 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def index(request):
-    return HttpResponse("MAIN PAGE")
+    f = open('readme.txt', 'r')
+    file_content = f.read()
+    f.close()
+    return HttpResponse(file_content, content_type="text/plain")
 
 
 
