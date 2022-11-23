@@ -80,7 +80,7 @@ def get_station_time_intervals(path_db, data_format='IAGA2002'):
         if data_format == 'IAGA2002':
             for i, ct in enumerate(time_range):
                 if ct - time_range[i - 1] > datetime.timedelta(days=1):
-                    print([start_int, time_range[i - 1]])
+                    #print([start_int, time_range[i - 1]])
                     time_intervals.append([start_int, time_range[i - 1]])
                     start_int = ct
         elif data_format == 'IAF':
