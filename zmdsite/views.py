@@ -73,11 +73,9 @@ def station_list_answer(request):
     # post 1
     data = json.loads(request.body)
     data_format = str(data['format']).upper()
-
+    print(data)
     # загрузка ДБ достпуных данных
     station_db, path_db = get_ftp_db(data_format=data_format)
-    print(station_db)
-    print(path_db)
     station_time_intervals = get_station_time_intervals(path_db, data_format)
     print(station_time_intervals)
     return JsonResponse(station_time_intervals, safe=False)
