@@ -95,12 +95,15 @@ def get_station_time_intervals(path_db, data_format='IAGA2002'):
                 if ct - time_range[i - 1] > datetime.timedelta(days=366):
                     time_intervals.append([start_int, time_range[i - 1]])
                     start_int = ct
-        print(time_intervals, 'INTERVALS TOTAL')
+
         if len(time_intervals) == 0:
             # append time interval im unix time
             station_time_intervals[station_key].append(
                 [int((time_range[0]+datetime.timedelta(hours=23)).timestamp()),
                  int((time_range[-1]+datetime.timedelta(hours=23)).timestamp())])
+        else:
+            print(len(time_intervals))
+            print(len(time_intervals[0]))
     return station_time_intervals
 
 
