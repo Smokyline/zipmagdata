@@ -77,7 +77,7 @@ def station_list_answer(request):
     # загрузка ДБ достпуных данных
     station_db, path_db = get_ftp_db(data_format=data_format)
     station_time_intervals = get_station_time_intervals(path_db, data_format)
-    print(station_time_intervals)
+    print(station_time_intervals, 'OUT JSON')
     return JsonResponse(station_time_intervals, safe=False)
 
 @csrf_exempt
