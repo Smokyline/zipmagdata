@@ -7,14 +7,13 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404, JsonRespons
 from .get_magdataDB import get_ftp_db
 import json, zipfile
 from django.views.decorators.csrf import csrf_exempt
-# Create your views here.
+from zipmagdata.settings import BASE_DIR
 
 def index(request):
-    f = open('readme.txt', 'r')
+    f = open(os.path.join(BASE_DIR, 'readme.txt'), 'r')
     file_content = f.read()
     f.close()
     return HttpResponse(file_content, content_type="text/plain")
-
 
 
 def check_station(request):
