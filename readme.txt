@@ -1,10 +1,10 @@
-jsonpost1 192.168.0.126:8000/stations-request/
+jsonpost1 host-ip/stations-request/
 post:
 -format=iaf or iaga2002 or add
 return:
 {'khb': [[1577826000, 1606770000]], 'mgd': [[1577826000, 1606770000]], 'irt': [[1609448400, 1638306000]], 'pet': [[1609448400, 1638306000]]}
 
-jsonpost2a 192.168.0.126:8000/data-request/
+jsonpost2a host-ip/data-request/
 post:
 -format=iaf or iaga2002 or add
 -code= single station or list
@@ -12,7 +12,7 @@ post:
 return:
 zip
 
-jsonpost2b 192.168.0.126:8000/data-request/
+jsonpost2b host-ip/data-request/
 post:
 -format=iaf or iaga2002 or add
 -code= single station or list
