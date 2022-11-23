@@ -152,7 +152,7 @@ if PC == 'belov':
     FTP1_DIR = os.path.join(BASE_DIR, 'data/ftp1/premagdata/')
     EMAIL_TXT_PATH = os.path.join(BASE_DIR, 'emails.txt')
 else:
-    STATIC_OS_PATH = '/data/zip/'
+    STATIC_OS_PATH = '/data/'
     FTP_DIR = '/data/ftp/magdata/minute/definitive/'
     FTP1_DIR = '/data/ftp1/premagdata/'
     EMAIL_TXT_PATH = '/data/zip/emails.txt'
